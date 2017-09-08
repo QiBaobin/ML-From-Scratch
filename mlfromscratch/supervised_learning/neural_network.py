@@ -92,7 +92,7 @@ class NeuralNetwork():
 
         bar = progressbar.ProgressBar(widgets=bar_widgets)
         for _ in bar(range(n_epochs)):
-            idx = range(n_samples)
+            idx = list(range(n_samples))
             np.random.shuffle(idx)
 
             batch_t_error = 0   # Mean batch training error
